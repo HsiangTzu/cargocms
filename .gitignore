@@ -128,6 +128,3 @@ test/stress/output_client/
 test/stress/output_serverMemory.xls
 test/stress/*.txt
 test/stress/*.xls
-.c9 
-.eslintrc
-yarn.lock

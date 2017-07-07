@@ -23,7 +23,7 @@ module.exports = {
       {
         token,
         data: {
-          paymentMethods: sails.config.paymentMethods
+          paymentMethods: paymentMethodArray,
         }
       }
     );
