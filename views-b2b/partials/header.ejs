@@ -83,6 +83,17 @@
 
       </ul>
       
+
+      <!--搜尋欄-->
+      <% const q = (typeof data !== 'undefined') ? (data.query || {}) : {}; %>
+      <form method="GET" action="/" class="navbar-form navbar-right">
+        <input type="hidden" name="category" value="<%= (q.q) ? q.category : 0 %>" /> 
+        <div class="form-group">
+          <input type="text" name="q" class="form-control" placeholder="搜尋所有產品" value="<%= (q.q) ? q.q : '' %>">
+        </div>
+      </form>
+    </div><!-- /.navbar-collapse -->
+
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse xs-show-only" id="bs-example-navbar-collapse-2">
       <ul class="nav navbar-nav navbar-right b2b-cart" id="mobile-cart">

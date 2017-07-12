@@ -5,7 +5,13 @@ module.exports = {
 
       if( !category ){
         category = 1;
-      }
+
+      } 
+      // 防錯
+      if(sort && sort.split('|').length > 1)
+        [sort, sortDir] = sort.split('|');
+      sort = UtilsService.findInArray(['price', 'time'], sort);
+      sortDir = UtilsService.findInArray(['asc', 'desc'], sortDir.toLowerCase());
 
       const result = await ProductService.find({
         start,
