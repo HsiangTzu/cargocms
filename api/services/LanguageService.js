@@ -30,7 +30,8 @@ module.exports ={
 
       return language;
     }catch(e) {
-      //sails.log.error(e);
+      sails.log.error(e);
+      throw new Error(e);
     }
   },
 

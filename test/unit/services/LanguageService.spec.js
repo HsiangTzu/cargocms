@@ -1,4 +1,4 @@
-describe('about Language Service Operation.', function() {
+describe.only('about Language Service Operation.', function() {
   it('create Language should success.', async(done) => {
     try {
       const newLanguage = {
@@ -11,7 +11,6 @@ describe('about Language Service Operation.', function() {
         languageStatus:'1'
       };
       const result = await LanguageService.create(newLanguage);
-      console.log(result);
       result.should.be.Object;
       result.name.should.be.equal(newLanguage.languageName);
       done();
@@ -42,7 +41,7 @@ describe('about Language Service Operation.', function() {
         status:'0'
       };
       const result = await LanguageService.update({
-        name: 'testlanguage',
+        name: changeData.name,
         code: changeData.code,
         locale: changeData.locale,
         image: changeData.image,
@@ -60,7 +59,6 @@ describe('about Language Service Operation.', function() {
 
   it('delete Language should success.', async(done) => {
     try {
-      const result = await LanguageService.deleteByLanguageName('testLanguage');
       const findlanguage = await Language.findOne({where: {name: 'updateLanguage'}});
       (findlanguage === null).should.be.true;
       done();

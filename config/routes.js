@@ -197,6 +197,11 @@ var defaultConfig = {
   // 'put /api/admin/suppliershiporderhistory/:id': 'api/admin/SupplierShipOrderHistoryController.update',
   // 'delete /api/admin/suppliershiporderhistory/:id': 'api/admin/SupplierShipOrderHistoryController.destroy',
 
+  //-----language-----
+  'post /api/admin/language': 'api/admin/LanguageController.create',
+  'put /api/admin/language/:name': 'api/admin/LanguageController.update',
+  'get /api/admin/language/:name': 'api/admin/LanguageController.find',
+  'delete /api/admin/language/:name': 'api/admin/LanguageController.destroy',
 
   'get /api/product': 'api/ProductController.find',
 
