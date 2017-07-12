@@ -1,5 +1,4 @@
-let taiwanLanguage;
-describe('about Language model operation.',function() {
+describe.only('about Language model operation.',function() {
   const languageData = {
     name: 'testLanguage',
     code: 'tCode',
@@ -12,7 +11,7 @@ describe('about Language model operation.',function() {
 
   it('create Language should success.', async(done) => {
     try {
-      taiwanLanguage = await Language.create(languageData);
+      const taiwanLanguage = await Language.create(languageData);
       taiwanLanguage.id.should.be.INTEGER;
       done();
     }catch(e) {
