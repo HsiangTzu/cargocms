@@ -11,7 +11,7 @@ module.exports = {
           data: language
         });
       }else {
-        throw new Error('Create ${data.languageName} failed.');
+        throw new Error(`Create ${data.languageName} failed.`);
       }
     }catch (e) {
       res.serverError(e);

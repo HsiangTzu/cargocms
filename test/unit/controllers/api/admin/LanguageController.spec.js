@@ -11,7 +11,7 @@ describe.only('about language api Controller operation.', function() {
     };
     try {
       const res = await request(sails.hooks.http.app)
-      .post('/api/admin/language')
+      .post(`/api/admin/language`)
       .send(createThisLanguage);
       // sails.log.info('create language controller spec =>', res.body);
       res.body.should.be.Object;
@@ -81,7 +81,7 @@ describe.only('about language api Controller operation.', function() {
     it('should success.', async(done) => {
       try {
         const res = await request(sails.hooks.http.app)
-        .delete('/api/admin/language/${deleteThisLanguage.name}');
+        .delete(`/api/admin/language/${deleteThisLanguage.name}`);
         // sails.log.info('delete language controller spec =>', res.body);
         res.body.success.should.be.true;
         done();
@@ -123,7 +123,7 @@ describe.only('about language api Controller operation.', function() {
     it('should success.', async (done) => {
       try {
         const res = await request(sails.hooks.http.app)
-        .put('/api/admin/language/${updateThisLanguage.name}')
+        .put(`/api/admin/language/${updateThisLanguage.name}`)
         .send(updatedLanguage);
         res.status.should.eq(200);
         res.body.data.code.should.be.equal(updatedLanguage.code);
