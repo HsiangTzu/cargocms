@@ -1,4 +1,4 @@
-describe.only('about language api Controller operation.', function() {
+describe('about language api Controller operation.', function() {
   it('create language should success.', async(done) => {
     const createThisLanguage = {
       languageName: 'testLanguage',
@@ -11,7 +11,7 @@ describe.only('about language api Controller operation.', function() {
     };
     try {
       const res = await request(sails.hooks.http.app)
-      .post(`/api/admin/language`)
+      .post('/api/admin/language')
       .send(createThisLanguage);
       // sails.log.info('create language controller spec =>', res.body);
       res.body.should.be.Object;

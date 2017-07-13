@@ -1,4 +1,4 @@
-describe.only('about Language Service Operation.', function() {
+describe('about Language Service Operation.', function() {
   it('create Language should success.', async(done) => {
     try {
       const newLanguage = {
