@@ -24,6 +24,7 @@ if (!Array.prototype.find) {
 module.exports = {
   find: async (req , res) => {
     try{
+
       /**
        * @property {Object} query - req.query
        * @property {Number} query.start - 起始位置
@@ -49,10 +50,7 @@ module.exports = {
         length,
         categoryId: category,
         supplierId: supplier,
-        limit,
-        keyword: q, 
-        sortBy: sort,
-        sortDir
+        limit
       });
 
       const message = 'Get Product Success';
