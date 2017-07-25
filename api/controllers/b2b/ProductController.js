@@ -101,7 +101,7 @@ module.exports = {
       });
 
       let bannerLogo = {};
-      if(_.hasIn(sails.config, 'layoutImages.banner[0]')) {
+      if(_.hasIn(sails.config, 'layoutImages.bannerLogo[0]')) {
         bannerLogo = sails.config.layoutImages.bannerLogo[0];
       } else {
         bannerLogo.url = "";
