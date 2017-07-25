@@ -78,10 +78,35 @@ module.exports = {
       other: '{}',
     }]
   },
+
   layoutImages: {
-    banner: [{
-      url: 'http://i.imgur.com/Z2K6d9T.jpg',
-      dimension: '1500x1001',
+    'banner-1': [{
+      url: 'http://i.imgur.com/FOsJclZ.jpg',
+      dimension: '1500x362',
+    }],
+    'banner-2': [{
+      url: 'http://i.imgur.com/FOsJclZ.jpg',
+      dimension: '1500x362',
+    }],
+    'banner-3': [{
+      url: 'http://i.imgur.com/FOsJclZ.jpg',
+      dimension: '1500x362',
+    }],
+    'banner-4': [{
+      url: 'http://i.imgur.com/FOsJclZ.jpg',
+      dimension: '1500x362',
+    }],
+    'banner-5': [{
+      url: 'http://i.imgur.com/FOsJclZ.jpg',
+      dimension: '1500x362',
+    }],
+    indexLogo: [{
+      url: 'http://i.imgur.com/hKtnFZ6.jpg',
+      dimension: '129x149',
+    }],
+    bannerLogo: [{
+      url: 'http://i.imgur.com/7fyFBp4.jpg',
+      dimension: '107x49',
     }],
     indexLogo: [{
       url: 'http://i.imgur.com/hKtnFZ6.jpg',
@@ -92,5 +117,4 @@ module.exports = {
       dimension: '107x49',
     }],
   }
-
 };
