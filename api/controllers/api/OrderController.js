@@ -56,7 +56,7 @@ module.exports = {
         mailMessage.shipmentAddress = order.shippingAddress1;
         mailMessage.note = order.comment;
         mailMessage.phone = order.telephone;
-        
+
 
         const result = await Config.findOne({
           where: { key: 'ATM' }
@@ -137,6 +137,13 @@ module.exports = {
         }
       })
 
+      let navbarLogo = {};
+      if(_.hasIn(sails.config, 'layoutImages.navbarLogo[0]')) {
+        navbarLogo = sails.config.layoutImages.navbarLogo[0];
+      } else {
+        navbarLogo.url = "";
+      }
+
       message = 'get Order info success';
 
       // get all payment methods from db
@@ -156,7 +163,10 @@ module.exports = {
         data: {
           item: order,
           product: orderProduct,
-          paymentMethods: paymentMethodArray || []
+          paymentMethods: sails.config.paymentMethods
+        },
+        layoutImages: {
+          navbarLogo: navbarLogo,
         }
       });
 
@@ -184,11 +194,21 @@ module.exports = {
         ],
       })
 
+      let navbarLogo = {};
+      if(_.hasIn(sails.config, 'layoutImages.navbarLogo[0]')) {
+        navbarLogo = sails.config.layoutImages.navbarLogo[0];
+      } else {
+        navbarLogo.url = "";
+      }
+
       message = 'get order history success.';
       res.view('b2b/order/orderhistory', {
         message,
         data: {
           items
+        },
+        layoutImages: {
+          navbarLogo: navbarLogo,
         }
       });
 
