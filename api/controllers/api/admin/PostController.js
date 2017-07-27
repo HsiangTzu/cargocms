@@ -58,7 +58,8 @@ module.exports = {
   update: async (req, res) => {
     try {
       const { id } = req.params;
-      res.ok({
+      console.log('req.body=>', req.body);
+      return res.ok({
         message: 'update post success.',
         data: await PostService.update(id, req.body),
       });
