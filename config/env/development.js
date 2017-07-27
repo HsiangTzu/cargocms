@@ -64,17 +64,17 @@ module.exports = {
     name: 'GoogleAPIKey',
     key: 'AIzaSyBSPvypkv-HnFRsC0ZFDvinPMPlEC59Ous'
   },
-  
+
   taxrate : 0.05,
 
   paymentMethods: {
     origin: [{
       type: 'ATM',
       provider: '國泰世華銀行',
-      other: '{"bankId": "013", "bankBranch": "南屯", "bankBranchId": "2402", "account": "808080808080", "accountName": "管李仁"}'  
+      other: '{"bankId": "013", "bankBranch": "南屯", "bankBranchId": "2402", "account": "808080808080", "accountName": "管李仁"}'
     }, {
       type: '貨到付款',
-      provider: '黑貓宅急便', 
+      provider: '黑貓宅急便',
       other: '{}',
     }]
   },
@@ -105,14 +105,6 @@ module.exports = {
       dimension: '129x149',
     }],
     navbarLogo: [{
-      url: 'http://i.imgur.com/7fyFBp4.jpg',
-      dimension: '107x49',
-    }],
-    indexLogo: [{
-      url: 'http://i.imgur.com/hKtnFZ6.jpg',
-      dimension: '129x149',
-    }],
-    bannerLogo: [{
       url: 'http://i.imgur.com/7fyFBp4.jpg',
       dimension: '107x49',
     }],
