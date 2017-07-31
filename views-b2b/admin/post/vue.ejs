@@ -33,8 +33,13 @@ var postAppModel = {
   }
 }
 
+<%- include ../../partials/summernote/imageUpload.ejs %>
+
 var postApp = new Vue({
   data: postAppModel,
+  ready: function (params) {
+    summernoteImageUpload();
+  },
   methods: {
     cancel: function (event) {
       postApp.onLeavePageEdit(function() {
@@ -49,6 +54,8 @@ var postApp = new Vue({
       }
       postAppModel.data.item.TagsArray = $('#tagsinput').tagsinput('items');
       postAppModel.data.item.content = $('.summernote').summernote('code');
+
+      console.log('postAppModel.data.item=>', postAppModel.data.item);
       $.ajax({
         url: '/api/admin/post',
         type: 'POST',

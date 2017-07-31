@@ -622,5 +622,9 @@ window.appMain = new Vue({
 	data: appModel,
   methods: defaultVueMathod,
   ready: ready,
+  ready_p: function() {
+    console.log('vue is ready.');
+    // if (typeof summernoteImageUpload !== 'undefined') { summernoteImageUpload(); }
+  },
   computed: computed,
 });

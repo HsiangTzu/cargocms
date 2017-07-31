@@ -180,6 +180,11 @@ div.desc{
     postApp.$mount("#post-show");
     postApp.loadItem();
   };
+  setTimeout(function() {
+    $('.summernote').each(function (index) {
+      $('.summernote').eq(index).summernote('disable');
+    })
+  }, 1500)
 
   // var pagedestroy = function() {
   // $(window).unload(function() {
