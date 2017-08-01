@@ -45,9 +45,11 @@ var appModel = {
 appMain.enableText = function () {
   $('textarea').attr('disabled', false);
 }
+
 appMain.ready = function (params) {
   summernoteImageUpload();
 }
+
 appMain.enterDatetime = function () {
   $("input[name='sellStartDate']").datetimepicker({
     format: 'YYYY/MM/DD HH:mm',
