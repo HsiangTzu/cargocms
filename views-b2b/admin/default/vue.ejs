@@ -611,10 +611,6 @@ var defaultVueMathod = {
 	}
 }
 
-if(typeof ready === 'undefined') {
-  var ready = function () {console.log('vue is ready.');};
-}
-
 if(typeof computed === 'undefined') {
   var computed = {};
 }
@@ -622,10 +618,9 @@ if(typeof computed === 'undefined') {
 window.appMain = new Vue({
 	data: appModel,
   methods: defaultVueMathod,
-  ready: ready,
-  ready_p: function() {
+  ready: function() {
     console.log('vue is ready.');
-    // if (typeof summernoteImageUpload !== 'undefined') { summernoteImageUpload(); }
+    if (typeof summernoteImageUpload !== 'undefined') { summernoteImageUpload(); }
   },
   computed: computed,
 });
