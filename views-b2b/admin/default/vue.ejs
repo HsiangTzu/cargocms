@@ -593,7 +593,8 @@ var defaultVueMathod = {
 
 		registerForm.validate({
 			rules: formRules,
-			messages: formMessages,
+      messages: formMessages,
+      ignore: ":hidden:not(#summernote),.note-editable.panel-body",
 			errorPlacement: function (error, element) {
 				error.insertAfter(element.parent());
 			},

@@ -178,6 +178,8 @@ var postApp = new Vue({
           }
         },
 
+        ignore: ":hidden:not(#summernote),.note-editable.panel-body",
+
         // Do not change code below
         errorPlacement : function(error, element) {
           error.insertAfter(element.parent());
@@ -372,6 +374,7 @@ var postApp = new Vue({
     show: function (postId) {
       location.href = '/admin/#/admin/post/show/' + postId;
     },
+
     edit: function (postId) {
       location.href = '/admin/#/admin/post/edit/' + postId;
     },
